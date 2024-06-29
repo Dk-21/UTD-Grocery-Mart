@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>UTD Mart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="mystyle.css">
+
+</head>
+<body>
+
+
+<header>
+  <h2>UTD Mart</h2>
+  <!-- <h2>Denish Kalariya</h2>
+  <h2>dmk220001</h2>
+  <h2>CS614</h2> -->
+  <p align="left" id="date"></p>
+
+</header>
+
+<div class="topnav">
+  <a  href="Fresh_Products.html">Fresh Products</a>
+  <a  href="Frozen.html">Frozen</a>
+  <a href="Pantry.html">Pantry</a>
+  <a  href="BreakfastandCereal.html">Breakfast & Cereal</a>
+  <a  href="Baking.html">Baking</a>
+  <a  href="Snacks.html">Snacks</a>
+  <a  href="Candy.html">Candy</a>
+  <a  href="Specialty_shop.html">Specialty Shop</a>
+  <a  href="Deals.html">Deals</a>
+  <a  class="active" href="My_account.html">My Account</a>
+  <a  href="About_us.html">About us</a>
+  <a  href="Contact_us.html">Contact Us</a>
+  <a href="cart.html">
+    <i class="fa fa-shopping-cart"></i> Cart
+</a>
+</div>
+
+
+<section>
+  <nav>
+    <ul>
+      <img src="myaccount.jpg" alt="Frozen" width="90%" height="240" padding-right="10">
+      <br/>
+      <br/>
+      <h2>My account</h2>
+      
+      <li>Account Information</li>
+      <li>Order History</li>
+      <li>Shipping and Delivery</li>
+      <li>Payment Methods</li>
+      <li>Wishlists</li>
+      <li>Newsletter Subscriptions</li>
+      <li>Return and Refund Requests</li>
+      <li>Account Notifications</li>
+      <li>Customer Support and Help Center</li>
+      <li>Privacy and Security</li>
+    </ul>
+  </nav>
+
+  
+  <article>
+    <h1>My Account</h1>
+    
+  <p> 
+    Your UTD Mart account is your gateway to a seamless and personalized shopping experience. Within your account, you have the power to manage your personal information, ensuring that your details are up-to-date for a smooth transaction process. Whether you need to change your contact information or update your password, it's all at your fingertips in the "Account Information" section. We take your privacy and security seriously, and you can rest assured that your information is handled with the utmost care.
+    <br/>
+    <br/>
+Track and review your shopping journey effortlessly through the "Order History" feature. This provides you with a comprehensive overview of your past purchases, including order dates, item details, and current order statuses. Plus, you have the convenience of reordering items directly from your order history, saving you time and effort. We believe in transparency and keeping you informed every step of the way.
+<br/>
+<br/>
+Customization is key at UTD Mart, and that's why we offer features like "Wishlists" and "Newsletter Subscriptions." Create wishlists to curate your dream shopping list, and easily move items to your cart when you're ready to purchase. Stay in the loop with our latest promotions and updates by subscribing or unsubscribing from our newsletters, and tailor your email preferences to receive only what matters most to you. Your UTD Mart account is designed to enhance your shopping experience and put you in control of your journey with us.
+  </p>
+
+  <Strong> Sign In</Strong>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for="email">Email :</label><br>
+    <input type="text" id="email" name="email"><br>
+  </form>
+  <br>
+
+  <input type="submit" value="Send Request" />
+  </article>
+</section>
+
+<footer>
+  <p align="left">DMK220001, Denish Kalariya, CS6314.001</p>
+  <p>Thank you for Visiting my website</p>
+</footer>
+
+
+<script>
+  // Get the current date and time
+  function updateDateTime() {
+            const now = new Date();
+            const currentDateTime = now.toLocaleString();
+            document.getElementById('date').innerHTML = currentDateTime;
+      }
+      setInterval(updateDateTime, 1000);
+</script>
+
+</body>
+</html>
+

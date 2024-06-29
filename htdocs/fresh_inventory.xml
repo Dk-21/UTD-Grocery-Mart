@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<data>
+  <products>
+  <product name="Apples" quantity="16"/>
+  <product name="Oranges" quantity="4"/>
+  <product name="Bananas" quantity="5"/>
+  <product name="Broccoli" quantity="6"/>
+  <product name="Beans" quantity="8"/>
+  <product name="Corn" quantity="5"/>
+  <product name="Strawberry" quantity="9"/>
+  <product name="Tomatoes" quantity="5"/>
+  <product name="Watermelon" quantity="10"/>
+  <product name="Carrots" quantity="8"/>
+  <product name="Fruit_Blend" quantity="9"/>
+  <product name="PreCut_Watermelon" quantity="10"/>
+  <product name="Onions" quantity="110"/>
+  <product name="tomatobag" quantity="10"/>
+  <product name="Cauliflower" quantity="9"/>
+  <product name="Cucumber" quantity="10"/>
+  <product name="Tostitos" quantity="9"/>
+  <product name="Queso" quantity="10"/>
+  <product name="Pumpkin" quantity="10"/>
+  <product name="Avocado" quantity="9"/>
+  <product name="Dragon_Fruit" quantity="10"/>
+  <!-- <product name="Kiwi" quantity="10"/> -->
+  </products>
+</data>

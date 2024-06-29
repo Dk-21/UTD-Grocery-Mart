@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UTD Mart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="mystyle.css">
+
+</head>
+<body>
+
+
+<header>
+  <h2>UTD Mart</h2>
+  <p align="left" id="date"></p>
+</header>
+
+<div class="topnav">
+  <a  href="Fresh_Products.html">Fresh Products</a>
+  <a  href="Frozen.html">Frozen</a>
+  <a href="Pantry.html">Pantry</a>
+  <a  href="BreakfastandCereal.html">Breakfast & Cereal</a>
+  <a  href="Baking.html">Baking</a>
+  <a  href="Snacks.html">Snacks</a>
+  <a  href="Candy.html">Candy</a>
+  <a  class="active" href="Specialty_shop.html">Specialty Shop</a>
+  <a  href="Deals.html">Deals</a>
+  <a  href="My_account.html">My Account</a>
+  <a  href="About_us.html">About us</a>
+  <a  href="Contact_us.html">Contact Us</a>
+</div>
+
+
+<section>
+  <nav>
+    <ul>
+      <img src="speciality.jpg" alt="Frozen" width="90%" height="240" padding-right="10">
+      <br/>
+      <br/>
+      <h2>Speciality of The shops</h2>
+<li>Truffle Oil</li>
+<li>Artisanal Cheeses</li>
+<li>Extra Virgin Olive Oil</li>
+<li>Balsamic Vinegar</li>
+<li>Imported Prosciutto
+<li>Organic Quinoa</li>
+<li>Saffron Threads</li>
+<li>Aged Balsamic Glaze</li>
+<li>Wild-Caught Salmon</li>
+<li>Grass-Fed Beef</li>
+<li>French Macarons</li>
+<li>Foie Gras</li>
+<li>Organic Chia Seeds</li>
+<li>Beluga Caviar</li>
+<li>Gourmet Truffle Salt</li>
+    </ul>
+  </nav>
+
+  
+  <article>
+    <h1>Speciality of the Shops</h1>
+    
+  <p>
+    Explore a world of culinary luxury with our selection of specialty foods at UTD Mart. From exquisite truffle oils that add an earthy elegance to your dishes to the finest aged balsamic vinegar that imparts a rich and complex flavor to your salads, our specialty foods section is a haven for food enthusiasts. Discover the art of gourmet cheese with our assortment of artisanal cheeses, carefully crafted by skilled cheesemakers from around the world. These cheeses showcase unique textures and flavors, perfect for creating impressive cheese boards or elevating your recipes.
+    <br/>
+    <br/>
+Elevate your cooking with our premium oils and condiments. Our extra virgin olive oil, sourced from the finest Mediterranean groves, lends a robust and fruity taste to your culinary creations. Pair it with our aged balsamic glaze for a harmonious blend of sweet and tangy notes that elevate your salads and marinades. Delve into the world of exotic spices with our saffron threads, a prized ingredient that imparts a subtle floral aroma and vibrant color to your dishes, making them truly extraordinary.
+<br/>
+<br/>
+For those seeking the finest in protein, we offer wild-caught salmon and grass-fed beef. Our commitment to sustainability ensures that you're getting high-quality, responsibly sourced options that are both healthy and delicious. As a finishing touch, indulge in the sweet sophistication of French macarons or the decadence of foie gras, both delicacies that cater to refined palates. Our selection of specialty foods represents the pinnacle of culinary excellence, allowing you to transform ordinary meals into extraordinary dining experiences. Visit UTD Mart and elevate your culinary journey today. </p>
+
+
+<button id="startSpecialOffer">Start Special Offer Questionnaire</button>
+
+            <div id="specialOfferContainer" style="display: none;">
+                <div id="questionContainer">
+                    <p id="questionText"></p>
+                    <label>
+                        <input type="radio" name="currentQuestion" value="yes"> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="currentQuestion" value="no"> No
+                    </label>
+                    <button id="nextQuestion">Next</button>
+                    <button id="skipQuestion">Skip</button>
+                </div>
+                <div id="resultContainer" style="display: none;">
+                    <p id="qualificationText"></p>
+                    <p id="offerText"></p>
+                    <p id="timeSpentText"></p>
+                </div>
+            </div>
+  
+  </article>
+</section>
+
+<footer>
+  <p align="left">DMK220001, Denish Kalariya, CS6314.001</p>
+  <p>Thank you for Visiting my website</p>
+</footer>
+
+<!-- Add this code inside your HTML body, but keep your existing structure -->
+<!-- Include this code within your HTML body, retaining your existing structure -->
+<script>
+
+
+function updateDateTime() {
+            const now = new Date();
+            const currentDateTime = now.toLocaleString();
+            document.getElementById('date').innerHTML = currentDateTime;
+      }
+      setInterval(updateDateTime, 1000);
+  document.addEventListener("DOMContentLoaded", function () {
+      const startButton = document.getElementById("startSpecialOffer");
+      const specialOfferContainer = document.getElementById("specialOfferContainer");
+      const questionContainer = document.getElementById("questionContainer");
+      const resultContainer = document.getElementById("resultContainer");
+      const questionText = document.getElementById("questionText");
+      const qualificationText = document.getElementById("qualificationText");
+      const offerText = document.getElementById("offerText");
+      const timeSpentText = document.getElementById("timeSpentText");
+      const nextQuestionButton = document.getElementById("nextQuestion");
+      const skipQuestionButton = document.getElementById("skipQuestion");
+
+      const questions = [
+          {
+              text: "Are you a student?",
+              qualification: "student",
+              answer: "",
+          },
+          {
+              text: "Are you a low-income person?",
+              qualification: "low_income",
+              answer: "",
+          },
+          {
+              text: "Are you a regular customer?",
+              qualification: "regular_customer",
+              answer: "",
+          },
+      ];
+
+      let currentQuestion = 0;
+      let qualification = {};
+      let timeStart;
+
+      startButton.addEventListener("click", function () {
+          startButton.style.display = "none";
+          specialOfferContainer.style.display = "block";
+          timeStart = new Date().getTime();
+          showQuestion(currentQuestion);
+      });
+
+      nextQuestionButton.addEventListener("click", function () {
+          const answer = document.querySelector('input[name="currentQuestion"]:checked');
+          if (!answer) {
+              alert("Please select an answer.");
+              return;
+          }
+          questions[currentQuestion].answer = answer.value;
+          currentQuestion++;
+          if (currentQuestion < questions.length) {
+              showQuestion(currentQuestion);
+          } else {
+              calculateOffer();
+          }
+      });
+
+      skipQuestionButton.addEventListener("click", function () {
+          currentQuestion++;
+          if (currentQuestion < questions.length) {
+              showQuestion(currentQuestion);
+          } else {
+              calculateOffer();
+          }
+      });
+
+      function showQuestion(questionNumber) {
+          resetAlert();
+          questionText.innerText = `Question ${questionNumber + 1}: ${questions[questionNumber].text}`;
+      }
+
+      function resetAlert() {
+          const alertMessage = document.querySelector(".alert");
+          if (alertMessage) {
+              alertMessage.remove();
+          }
+      }
+
+      function calculateOffer() {
+          resetAlert();
+          const timeEnd = new Date().getTime();
+          const timeSpent = (timeEnd - timeStart) / 1000;
+          timeSpentText.innerText = `Time spent: ${timeSpent} seconds`;
+
+          let offerTextContent = "Woohoooo!!!!, Based on your answers, you qualify for $100 off your Purchase:\n";
+          let qualificationCount = 0;
+
+          if (questions[0].answer === "yes") {
+              offerTextContent += "- You are a student.\n";
+              qualificationCount++;
+          }
+          if (questions[1].answer === "yes") {
+              offerTextContent += "- You are a low-income person.\n";
+              qualificationCount++;
+          }
+          if (questions[2].answer === "yes") {
+              offerTextContent += "- You are a regular customer.\n";
+              qualificationCount++;
+          }
+
+          if (qualificationCount === 0) {
+              offerTextContent = "Sorry, you do not qualify for a special offer at this time.";
+          }
+
+          qualificationText.innerText = "Special Offer Qualification:";
+          offerText.innerText = offerTextContent;
+
+          questionContainer.style.display = "none";
+          resultContainer.style.display = "block";
+      }
+  });
+</script>
+  
+  
+
+</body>
+</html>
+

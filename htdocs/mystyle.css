@@ -1,0 +1,451 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+  a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+#datetime {
+    text-align:initial;
+    font-size: 18px;
+    color: #666;
+    margin-top: auto;
+}
+  
+  header {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #28445e;
+    padding: 30px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: #FC0 1px 0 10px;
+    background-image: url('bg.jpg');
+    opacity: 0.8;
+    font-size: 35px;
+    color:#28445e;
+    padding-bottom: 13px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 13px;
+    background-repeat: repeat-x;
+  }
+
+  table, th, td {
+    vertical-align : baseline;
+    position:relative ;
+    border: 1px solid;
+    opacity: 0.7;
+    border-style: dotted;
+    border-color: #542e2e;
+    border-width: 2pt;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    clear :none;
+  }
+
+  h3{
+    visibility: hidden;
+  }
+
+  em {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 30;
+    border-width: 2pt;
+  }
+
+  img {
+    vertical-align : baseline;
+    width : 90% ;
+    height : 140;
+    padding-right : 10;
+  }
+  nav ul {
+    list-style-type: none;
+    position: relative;
+    padding: -20;
+    list-style-type: disc;
+  }
+  
+  .topnav {
+    position: static;
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #542e2e;
+    color: white;
+  }
+
+
+  nav {
+    flex: 1;
+    float: left;
+    width: 30%;
+    background: #ccc;
+    padding: 20px;
+    border-style: dotted;
+    border-width: 2pt;
+    border-color: #542e2e;
+    min-height: 70vh;
+    max-height: fit-content;
+    /* Additional styles for responsiveness */
+    box-sizing: border-box;
+  }
+
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%; /* Set the max width to the maximum available width */
+    margin: 0 auto; /* Center the grid horizontally on the page */
+  }
+
+  /* Add CSS for individual product items */
+  .product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Add styling for product images with a fixed size */
+  .product-item img {
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+  }
+
+
+.radio{
+    clear :none;
+  }
+  
+article {
+  flex: 3;
+  display: block;
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  min-height: 70vh;
+  max-height: fit-content;
+  /* Additional styles for responsiveness */
+  box-sizing: border-box;
+}
+  
+  section {
+    display: flex;
+    font-family: sans-serif;
+    min-height: 70vh;
+    /* Additional styles for responsiveness */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+  }
+
+  
+  /* section::after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+
+  /* Shared for all DIVS in example */
+  footer {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #542e2e;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+
+
+
+  /* 
+  
+  For Category
+  Styling for the "Shop by Category" section with the .category-navigation class */
+/* Exotic styling for the "Shop by Category" section with the .category-navigation class */
+/* Aesthetic styling for the "Shop by Category" section with the .category-navigation class */
+/* Vertical list styling for the "Shop by Category" section with the .category-navigation class */
+.category-navigation {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left; /* Align content to the left */
+}
+
+.category-navigation h2 {
+  font-size: 2rem;
+  color: #333; /* Dark text color */
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.category-navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-navigation li {
+  margin: 0;
+  padding: 0;
+}
+
+.category-navigation a {
+  text-decoration: none;
+  color: #0074D9; /* Blue color for links */
+  font-weight: bold;
+  display: block; /* Display links in a block format (vertical) */
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.category-navigation a:hover {
+  background-color: #0074D9; /* Blue background on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* Style the active category link */
+.category-navigation a.active {
+  background-color: #333; /* Dark background for active link */
+  color: #fff; /* White text for active link */
+}
+
+.selected-category {
+  background-color: #8aaed3; /* Change to your desired background color */
+  color: white; /* Change to your desired text color */
+  font-weight: bold; /* Make the text bold if you like */
+}
+
+
+
+
+
+/* cart */
+
+/* Style the cart button */
+/* Position the cart button to the right */
+.cart-button {
+  margin-left: auto; /* Push the cart button to the right */
+}
+
+.cart-button i {
+  margin-right: 5px; /* Add spacing between the icon and text */
+}
+
+
+/* Position the cart button to the right */
+
+
+
+
+
+
+/* Button for products  */
+.product-item button {
+  background-color: #1e2b36; /* Background color for the button */
+  color: #fff; /* Text color */
+  padding: 8px 16px; /* Padding around the text */
+  border: none; /* Remove the default button border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  transition: background-color 0.3s; /* Add a smooth background color transition on hover */
+}
+
+.product-item button:hover {
+  background-color: #0056a2; /* Background color on hover */
+}
+
+
+
+
+
+
+
+
+/* Cart Item CSS */
+.cart-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+
+
+
+/* Speciality Shop CSS */
+#questionContainer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Style for the question text */
+#questionText {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the labels and radio buttons */
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Style for the buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Style for the result container */
+#resultContainer {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Style for the result text */
+#qualificationText {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the offer text */
+#offerText {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Style for the time spent text */
+#timeSpentText {
+  font-size: 16px;
+}
+
+
+
+
+
+/* Snacks Page */
+/* Style for the search bar */
+#snackSearch {
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Style for the search button */
+#searchButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add some padding to the search button */
+#searchButton {
+  padding: 10px 20px;
+}
+
+/* Change the cursor to a pointer on hover */
+#searchButton:hover {
+  background-color: #45a049;
+}
+
+
+
+
+

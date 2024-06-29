@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UTD Mart - Cart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+  <header>
+    <h2><strong>UTD Mart</strong></h2>
+    <p align="left" id="date"></p>
+  </header>
+
+  <div class="topnav">
+    <a  href="Fresh_Products.html">Fresh Products</a>
+    <a href="Frozen.html">Frozen</a>
+    <a href="Pantry.html">Pantry</a>
+    <a href="BreakfastandCereal.html">Breakfast & Cereal</a>
+    <a href="Baking.html">Baking</a>
+    <a href="Snacks.html">Snacks</a>
+    <a href="Candy.html">Candy</a>
+    <a href="Specialty_shop.html">Specialty Shop</a>
+    <a href="Deals.html">Deals</a>
+    <a href="My_account.html">My Account</a>
+    <a href="About_us.html">About us</a>
+    <a href="Contact_us.html">Contact Us</a>
+    <a class="active" href="cart.html" class="cart-button"><i class="fa fa-shopping-cart"></i> Cart</a>
+    <!-- <a href="checkout.html" class="checkout-button">Checkout</a> -->
+  </div>
+
+  <section>
+    <nav class="category-navigation">
+      <ul>
+        <li><a href="">Checkout Options</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2>Shopping Cart</h2>
+      <ul class="cart-list">
+        <!-- Cart items will be dynamically generated here -->
+      </ul>
+      <p class="cart-total">Total: $0.00</p>
+      
+      <div class="buy-button-container">
+        <button type="button" class="buy-button">Buy Now</button>
+    </div>
+    </article>
+  </section>
+
+ 
+  <footer>
+    <p align="left">DMK220001, Denish Kalariya, CS6314.001</p>
+    <p>Thank you for visiting my website</p>
+  </footer>
+
+  <script>
+    var final = 0;
+    // Get the current date and time
+    function updateDateTime() {
+            const now = new Date();
+            const currentDateTime = now.toLocaleString();
+            document.getElementById('date').innerHTML = currentDateTime;
+      }
+      setInterval(updateDateTime, 1000);
+    // Function to retrieve and initialize cart data from local storage
+    function initializeCart() {
+      try {
+        var cartData = localStorage.getItem('cart');
+        return cartData ? JSON.parse(cartData) : {};
+      } catch (error) {
+        console.error('Error parsing cart data from local storage:', error);
+        return {};
+      }
+    }
+
+    
+    // Function to update the cart in local storage
+    function updateCart(cart) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Function to display cart items in the cart list
+    function displayCart() {
+      var cart = initializeCart();
+      var cartList = document.querySelector('.cart-list');
+      var cartTotal = 0;
+
+      // Clear previous content
+      cartList.innerHTML = '';
+
+      
+      for (var itemName in cart) {
+        var cartItem = cart[itemName];
+        var itemTotal = cartItem.price * cartItem.quantity;
+        cartTotal += itemTotal;
+        console.log(cart);
+        var li = document.createElement('li');
+
+        li.innerHTML = `
+          <span>${itemName}</span>
+          <span>$${cartItem.price.toFixed(2)}</span>
+          <span>Quantity: ${cartItem.quantity}</span>
+          <button onclick="removeFromCart('${itemName}', 1, '${cartItem.source ? cartItem.source.replace("'", "\\'") : ''}')">Remove</button>
+
+        `;
+        // if (cartItem.source) {
+        //     li.innerHTML += `<button onclick="removeFromCart('${itemName}', '${cartItem.source.replace("'", "\\'")}')">Remove</button>`;
+        // }
+        cartList.appendChild(li);
+      }
+
+      var totalElement = document.querySelector('.cart-total');
+      totalElement.textContent = `Total: $${cartTotal.toFixed(2)}`;
+      final += cartTotal;
+    }
+
+    // Function to remove an item from the cart
+    // Function to remove one quantity of an item from the cart
+    function removeFromCart(itemName, removedQuantity, sourceFile) {
+    var cart = initializeCart();
+
+    if (cart[itemName]) {
+        if (cart[itemName].quantity > removedQuantity) {
+            cart[itemName].quantity -= removedQuantity; // Decrease the quantity by the specified amount
+        } else {
+            delete cart[itemName]; // If the quantity is less than or equal to the specified amount, remove the item from the cart
+        }
+
+        // Update the cart in local storage
+        updateCart(cart);
+
+        // Call the PHP script to update the source inventory
+        updateSourceInventory(itemName, removedQuantity, sourceFile);
+
+        // Update the cart display
+        displayCart();
+    }
+}
+
+// async function updateSourceInventory(itemName, removedQuantity, inventorySourceFile) {
+//     try {
+//       // Construct the URL to the PHP script
+//       var phpScriptUrl = 'Update5.php';
+
+//       // Create a new FormData object
+//       var formData = new FormData();
+
+//       // Append the required data
+//       formData.append('itemName', itemName);
+//       formData.append('removedQuantity', removedQuantity);
+//       formData.append('inventorySourceFile', inventorySourceFile);
+
+//       // Log the values to the console
+//       console.log('Item Name:', itemName);
+//       console.log('Removed Quantity:', removedQuantity);
+//       console.log('Inventory Source File:', inventorySourceFile);
+
+//       // Log the formData content for debugging
+
+//       // Create a fetch request to the PHP script
+//       var response = await fetch(phpScriptUrl, {
+//         method: 'POST',
+//         body: formData,
+//       });
+
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+
+//       // Log the raw response content for debugging
+//       var responseData = await response.text();
+//       console.log('Raw Response:', responseData);
+//     } catch (error) {
+//       console.error('Error:', error);
+//     }
+// }
+
+async function updateSourceInventory(itemName, removedQuantity, inventorySourceFile) {
+    try {
+        // Determine the file extension
+        var fileExtension = inventorySourceFile.split('.').pop().toLowerCase();
+
+
+        // Construct the URL to the PHP script based on the file extension
+        var phpScriptUrl = (fileExtension === 'xml') ? 'Update.php' : 'Update4.php';
+
+        // Create a new FormData object
+        var formData = new FormData();
+
+
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // Handle the response from the server, if needed
+      console.log(xhr.responseText);
+    }
+  };
+
+        const data = `itemName=${encodeURIComponent(itemName)}`;
+        console.log(data);
+        xhr.open('POST', 'remove_cart.php', true)
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        console.log(data);
+        xhr.send(data);
+
+
+
+
+
+        // Append the required data
+        formData.append('itemName', itemName);
+        formData.append('removedQuantity', removedQuantity);
+        formData.append('inventorySourceFile', inventorySourceFile);
+
+        // Log the values to the console
+        console.log('Item Name:', itemName);
+        console.log('Removed Quantity:', removedQuantity);
+        console.log('Inventory Source File:', inventorySourceFile);
+
+        // Log the formData content for debugging
+
+        // Create a fetch request to the PHP script
+        var response = await fetch(phpScriptUrl, {
+            method: 'POST',
+            body: formData,
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        // Log the raw response content for debugging
+        var responseData = await response.text();
+        console.log('Raw Response:', responseData);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+
+    // Call the displayCart function to show the cart on page load
+    displayCart();
+
+    function finalizePurchase() {
+    // AJAX request to buy.php
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Handle the response from the server
+            console.log(xhr.responseText);
+
+            // Clear the cart after successful purchase
+            clearCart();
+
+            // Notify the user
+            alert("Purchase completed!");
+        }
+    };
+
+    // Send the AJAX request to buy.php
+    xhr.open('POST', 'buy.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send();
+
+    // Additional logic for purchase can be added here if needed
+}
+
+function clearCart() {
+    // Clear local storage
+    localStorage.setItem('cart', JSON.stringify({}));
+
+    // Clear the cart list on the page
+    document.querySelector('.cart-list').innerHTML = '';
+
+    // Reset the total value
+    document.querySelector('.cart-total').textContent = 'Total: $0.00';
+
+    // Reset the final total variable
+    final = 0;
+}
+
+// Attach the event listener to the button
+document.querySelector('.buy-button').addEventListener('click', finalizePurchase);
+
+  </script>
+</body>
+</html>

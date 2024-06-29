@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UTD Mart - Cart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+  <header>
+    <h2><strong>UTD Mart</strong></h2>
+    <p align="left" id="date"></p>
+  </header>
+
+  <div class="topnav">
+    <a href="Fresh_Products.html">Fresh Products</a>
+    <a href="Frozen.html">Frozen</a>
+    <a href="Pantry.html">Pantry</a>
+    <a href="BreakfastandCereal.html">Breakfast & Cereal</a>
+    <a href="Baking.html">Baking</a>
+    <a href="Snacks.html">Snacks</a>
+    <a href="Candy.html">Candy</a>
+    <a href="Specialty_shop.html">Specialty Shop</a>
+    <a href="Deals.html">Deals</a>
+    <a href="My_account.html">My Account</a>
+    <a href="About_us.html">About us</a>
+    <a href="Contact_us.html">Contact Us</a>
+    <a class="active" href="cart.html" class="cart-button"><i class="fa fa-shopping-cart"></i> Cart</a>
+  </div>
+
+  <section>
+    <nav class="category-navigation">
+      <ul>
+        <li><a href="">Checkout Options</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2>Shopping Cart</h2>
+      <ul class="cart-list">
+        <!-- Cart items will be dynamically generated here -->
+      </ul>
+      <p class="cart-total">Total: $0.00</p>
+      
+      <div class="buy-button-container">
+        <button type="button" class="buy-button" onclick="finalizePurchase()">Buy Now</button>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <p align="left">DMK220001, Denish Kalariya, CS6314.001</p>
+    <p>Thank you for visiting my website</p>
+  </footer>
+
+  <script>
+    var final = 0;
+    function updateDateTime() {
+      const now = new Date();
+      const currentDateTime = now.toLocaleString();
+      document.getElementById('date').innerHTML = currentDateTime;
+    }
+    setInterval(updateDateTime, 1000);
+
+    function initializeCart() {
+      var cartData = localStorage.getItem('cart');
+      return cartData ? JSON.parse(cartData) : {};
+    }
+
+    function updateCart(cart) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function displayCart() {
+      var cart = initializeCart();
+      var cartList = document.querySelector('.cart-list');
+      var cartTotal = 0;
+
+      cartList.innerHTML = '';
+      for (var itemName in cart) {
+        var cartItem = cart[itemName];
+        var itemTotal = cartItem.price * cartItem.quantity;
+        cartTotal += itemTotal;
+
+        var li = document.createElement('li');
+        li.innerHTML = `
+          <span>${itemName}</span>
+          <span>$${cartItem.price.toFixed(2)}</span>
+          <span>Quantity: ${cartItem.quantity}</span>
+          <button onclick="removeFromCart('${itemName}', 1, '${cartItem.source ? cartItem.source.replace("'", "\\'") : ''}')">Remove</button>
+        `;
+        cartList.appendChild(li);
+      }
+      var totalElement = document.querySelector('.cart-total');
+      totalElement.textContent = `Total: $${cartTotal.toFixed(2)}`;
+      final += cartTotal;
+    }
+
+    function removeFromCart(itemName, removedQuantity, sourceFile) {
+      var cart = initializeCart();
+      if (cart[itemName]) {
+        if (cart[itemName].quantity > removedQuantity) {
+          cart[itemName].quantity -= removedQuantity;
+        } else {
+          delete cart[itemName];
+        }
+        updateCart(cart);
+        updateSourceInventory(itemName, removedQuantity, sourceFile);
+        displayCart();
+      }
+    }
+
+    function updateSourceInventory(itemName, removedQuantity, inventorySourceFile) {
+    // Construct the URL to the PHP script
+    var phpScriptUrl = 'update_inventory.php';
+
+    // Create a new FormData object
+    var formData = new FormData();
+    formData.append('itemName', itemName);
+    formData.append('removedQuantity', removedQuantity);
+    formData.append('inventorySourceFile', inventorySourceFile);
+
+    // Send the AJAX request using fetch
+    fetch(phpScriptUrl, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(data => {
+        console.log('Inventory updated successfully:', data);
+    })
+    .catch(error => {
+        console.error('Error updating inventory:', error);
+    });
+}
+
+
+    function finalizePurchase() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          clearCart();
+          alert("Purchase completed!");
+        }
+      };
+      xhr.open('POST', 'buy.php', true);
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.send();
+
+      function clearCart() {
+        localStorage.setItem('cart', JSON.stringify({}));
+        document.querySelector('.cart-list').innerHTML = '';
+        document.querySelector('.cart-total').textContent = 'Total: $0.00';
+      }
+    }
+
+    displayCart();
+  </script>
+</body>
+</html>

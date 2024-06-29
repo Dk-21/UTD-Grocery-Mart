@@ -1,0 +1,95 @@
+{
+    "products": [
+      {
+        "name": "blueberrypiefill",
+        "category": "Pie-filling",
+        "image": "baking/blueberry.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "cherrypiefill",
+        "category": "Pie-filling",
+        "image": "baking/cheeryfill.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "naturalfill",
+        "category": "Pie-filling",
+        "image": "baking/grtvaluepiefilling.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "strawberrypie",
+        "category": "Pie-filling",
+        "image": "baking/strawberrypie.jpg",
+        "price": 8.99
+      },
+      {
+        "name": "pillsburrycrust",
+        "category": "Pie-crust",
+        "image": "baking/pillsburrycrust.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "bakehouse",
+        "category": "Pie-crust",
+        "image": "baking/bakehousecrust.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "bettycrockercrust",
+        "category": "Pie-crust",
+        "image": "baking/bettycrockercrust.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "honeymaid",
+        "category": "Pie-crust",
+        "image": "baking/glutenfreehoneymaidcrust.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "southspoon",
+        "category": "Pie-pudding",
+        "image": "baking/southspoonpudding.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "jellovanila",
+        "category": "Pie-pudding",
+        "image": "baking/jellovanilapudding.jpg",
+        "price": 8.99
+      },
+      {
+        "name": "jellochocolate",
+        "category": "Pie-pudding",
+        "image": "baking/jellochocolatepudding.jpg",
+        "price": 9.99
+      },
+      {
+        "name": "mounds",
+        "category": "Pie-pudding",
+        "image": "baking/moundsdarchocopudding.jpg",
+        "price": 11.99
+      },
+      {
+        "name": "glass",
+        "category": "Pie-pans",
+        "image": "baking/glasspan.jpg",
+        "price": 4.99
+      },
+      {
+        "name": "disposablepeipans",
+        "category": "Pie-pans",
+        "image": "baking/disposablepeipans.jpg",
+        "price": 3.99
+      },
+      {
+        "name": "Hemma",
+        "category": "Pie-pans",
+        "image": "baking/hemmabakpan.jpg",
+        "price": 4.99
+      }
+    ]
+  }
+  

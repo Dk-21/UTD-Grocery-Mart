@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UTD Mart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+<link rel="stylesheet" href="mystyle.css">
+
+</head>
+<body>
+
+
+<header>
+  <h2>UTD Mart</h2>
+  <!-- <h2>Denish Kalariya</h2>
+  <h2>dmk220001</h2>
+  <h2>CS614</h2> -->
+  <p align="left" id="date"></p>
+
+</header>
+
+<div class="topnav">
+    <a  href="Fresh_Products.html">Fresh Products</a>
+    <a  class="active" href="Frozen.html">Frozen</a>
+    <a href="Pantry.html">Pantry</a>
+    <a  href="BreakfastandCereal.html">Breakfast & Cereal</a>
+    <a  href="Baking.html">Baking</a>
+    <a  href="Snacks.html">Snacks</a>
+    <a  href="Candy.html">Candy</a>
+    <a  href="Specialty_shop.html">Specialty Shop</a>
+    <a  href="Deals.html">Deals</a>
+    <a  href="My_account.html">My Account</a>
+    <a  href="About_us.html">About us</a>
+    <a  href="Contact_us.html">Contact Us</a>
+    <a href="cart.html">
+      <i class="fa fa-shopping-cart"></i> Cart
+  </a>
+  </div>
+  
+
+
+<section>
+  <nav class="category-navigation">
+    <ul>
+      <img src="frozen.jpg" alt="Frozen" width="90%" height="240" padding-right="10">
+      <br/>
+      <h2>Shop by Category</h2>
+      <ul>
+        <li><a href="#" data-category="all">All Products</a></li>
+        <li><a href="#" data-category="Frozen-breakfast">Frozen Breakfast</a></li>
+        <li><a href="#" data-category="Frozen-Desserts">Frozen Desserts</a></li>
+        <li><a href="#" data-category="Frozen-Meals">Frozen Meals</a></li>
+        <li><a href="#" data-category="Frozen-pizza">Frozen Pizza</a></li>
+        <li><a href="#" data-category="Frozen-Meat">Frozen Meat</a></li>
+        <li><a href="#" data-category="Frozen-Snacks">Frozen Snacks</a></li>
+        <li><a href="#" data-category="Rollbacks">Rollbacks</a></li>
+        <!-- Add more category links as needed -->
+      </ul>
+    </ul>
+  </nav>
+
+  
+  <article>
+
+    <h2 align="center" id="article-heading">Frozen Products</h2> 
+    <div class="product-grid" id="product-grid">
+
+      <!-- <div class="product-item" data-category="Frozen-breakfast">
+        <img src="FrozenBreakfast/eggandcheese.jpg" alt="eggandcheese">
+        <strong><p>EggandCheese</p></strong>
+          
+        <p>Price: $10.99</p>
+        <button onclick="addToCart('eggandcheese', 8.99, 'Frozen-breakfast')">Add to Cart</button>
+      </div>
+
+      
+      <div class="product-item" data-category="Frozen-breakfast">
+        <img src="FrozenBreakfast/croissantcrust.jpg" alt="croissantcrust">
+        <p>croissantcrust</p>
+        <p>Price: $10.99</p>
+        <button onclick="addToCart('croissantcrust', 10.99, 'Frozen-breakfast')">Add to Cart</button>
+      </div>
+
+      
+      <div class="product-item" data-category="Frozen-Desserts">
+        <img src="FrozenBreakfast/oatmilk.jpeg" alt="oatmilk">
+        <p>Oatmilk's Strawberry with Chocolate Flakes</p>
+        <p>Price: $9.99</p>
+        <button onclick="addToCart('oatmilk', 9.99, 'Frozen-Desserts')">Add to Cart</button>
+      </div>
+
+
+      <div class="product-item" data-category="Frozen-Desserts">
+        <img src="FrozenBreakfast/sodelicious.jpg" alt="sodelicious">
+        <p>SO Delicious Dairy Free Butter Pecan Coconutmilk Frozen Dessert</p>
+        <p>Price: $9.99</p>
+        <button onclick="addToCart('sodelicious', 9.99, 'Frozen-Desserts')">Add to Cart</button>
+      </div>
+
+
+      <div class="product-item" data-category="Frozen-Desserts">
+        <img src="FrozenBreakfast/dipped.jpg" alt="dipped">
+        <p>vanila </p>
+        <p>Price: $9.99</p>
+        <button onclick="addToCart('dipped', 9.99, 'Frozen-Desserts')">Add to Cart</button>
+      </div>
+
+
+      <div class="product-item" data-category="Frozen-Meals">
+        <img src="FrozenBreakfast/frozenmeal1.jpg" alt="Honeyroasted">
+        <p>Honey Roasted Turkey Breast </p>
+        <p>Price: $9.99</p>
+        <button onclick="addToCart('Honey_Roasted', 9.99, 'Frozen-Meals')">Add to Cart</button>
+      </div>
+
+
+
+      <div class="product-item" data-category="Frozen-Meals">
+        <img src="FrozenBreakfast/frozenmeal2.jpg" alt="ChickenAlfredo">
+        <p>Stouffer's Large Family Size Chicken Alfredo Frozen Meal, 57 oz</h3>
+        <p>Price: $9.99</p>
+        <button onclick="addToCart('ChickenAlfredo', 9.99, 'Frozen-Meals')">Add to Cart</button>
+      </div>
+
+      <div class="product-item" data-category="Frozen-Meals">
+        <img src="FrozenBreakfast/frozenmeal3.jpg" alt="Buffalochicken">
+        <p>Buffalo Chicken</h3>
+        <p>Price: $11.99</p>
+        <button onclick="addToCart('Buffalochicken', 11.99, 'Frozen-Meals')">Add to Cart</button>
+      </div>
+
+
+
+
+      <div class="product-item" data-category="Frozen-pizza">
+        <img src="FrozenBreakfast/pepperoni.jpg" alt="pepperoni">
+        <p>FRESCHETTA® Brick Oven Crust Pepperoni Pizza</p>
+        <p>Price: $11.99</p>
+        <button onclick="addToCart('pepperoni_pizza', 11.99, 'Frozen-Pizza')">Add to Cart</button>
+      </div>
+
+      <div class="product-item" data-category="Frozen-pizza">
+        <img src="FrozenBreakfast/cheesepizza.jpg" alt="cheesepizza">
+        <p>Rising Crust Cheese Frozen Pizza | Official JACK'S® PIZZA</p>
+        <p>Price: $10.99</p>
+        <button onclick="addToCart('cheesepizza', 10.99, 'Frozen-Pizza')">Add to Cart</button>
+      </div>
+
+
+      <div class="product-item" data-category="Frozen-pizza">
+        <img src="FrozenBreakfast/specialppizza.jpg" alt="specialpizza">
+        <p>Special Frozen Pizza | Connies</p>
+        <p>Price: $12.99</p>
+        <button onclick="addToCart('specialpizza', 12.99, 'Frozen-Pizza')">Add to Cart</button>
+      </div>
+
+
+
+      
+
+
+      <div class="product-item" data-category="Frozen-Meat">
+        <img src="FrozenBreakfast/frozenmeat1.jpg" alt="steamumm">
+        <p>Steak-Umm Beef Sandwich Steaks Sliced - 6 ct </p>
+        <p>Price: $8.99</p>
+        <button onclick="addToCart('steak_umm', 8.99, 'Frozen-Meat')">Add to Cart</button>
+      </div>
+
+
+      <div class="product-item" data-category="Frozen-Meat">
+        <img src="FrozenBreakfast/frozenmeat2.jpg" alt="beef">
+        <p>FoodLink Frozen Meat-Beef</p>
+        <p>Price: $21.99</p>
+        <button onclick="addToCart('beef', 21.99, 'Frozen-Meat')">Add to Cart</button>
+      </div>
+
+
+
+      
+      <div class="product-item" data-category="Frozen-Snacks">
+        <img src="FrozenBreakfast/snacks1.jpg" alt="Taquitos">
+        <p>Frozen Appetizers & Snacks- Taquitos</p>
+        <p>Price: $9.99</p>
+        <button onclick="addToCart('taquitos', 9.99, 'Frozen-Snacks')">Add to Cart</button>
+      </div>
+
+      <div class="product-item" data-category="Frozen-Snacks">
+        <img src="FrozenBreakfast/pizzasnacks.jpg" alt="pizzasnack">
+        <p>Bagel Bites Cheese & Pepperoni Mini Pizza Bagel Frozen Snacks - 18.6oz/24ct</p>
+        <p>Price: $12.99</p>
+        <button onclick="addToCart('pizzasnack', 12.99, 'Frozen-Snacks')">Add to Cart</button>
+      </div>
+
+
+      <div class="product-item" data-category="Frozen-Snacks">
+        <img src="FrozenBreakfast/crondogs.jpg" alt="corndogs">
+        <p>Mini Corn Dogs</p>
+        <p>Price: $11.99</p>
+        <button onclick="addToCart('corndogs', 11.99, 'Frozen-Snacks')">Add to Cart</button>
+      </div>
+
+
+
+
+      
+
+
+      <div class="product-item" data-category="Rollbacks">
+        <img src="FrozenBreakfast/rollback1.jpg" alt="homestyle_bakes">
+        <p>Banquet Homestyle Rollback in Boxed Meals</p>
+        <p><s>Price: $9.99</s></p>
+        <p>Price: $7.99</p>
+        <button onclick="addToCart('homestyle_bakes', 7.99, 'Rollbacks')">Add to Cart</button>
+      </div>
+
+
+      <div class="product-item" data-category="Rollbacks">
+        <img src="FrozenBreakfast/rollback2.jpg" alt="oncor">
+        <p>Barbeque Sauce & 6 Boneless Rib Shaped Patties</p>
+        <p><s>Price: $9.99</s></p>
+        <p>Price: $6.99</p>
+        <button onclick="addToCart('Oncor_patties', 6.99, 'Rollbacks')">Add to Cart</button>
+      </div> -->
+
+      
+    </div>
+  </article>
+</section>
+
+<footer>
+  <p align="left">DMK220001, Denish Kalariya, CS6314.001</p>
+  <p>Thank you for Visiting my website</p>
+</footer>
+
+<script>
+  // Get the current date and time
+
+
+  
+
+
+var productData = ""; // Empty string for now
+var inventoryData = ""; // Empty string for now
+// var cart = {};
+function initializeCart() {
+  try {
+    var cartData = localStorage.getItem('cart');
+    return cartData ? JSON.parse(cartData) : {}; // Provide a default empty object if cartData is undefined
+  } catch (error) {
+    console.error('Error parsing cart data from local storage:', error);
+    return {}; // Provide a default empty object in case of errors
+  }
+}
+
+// Fetch existing cart data from local storage
+var cart = initializeCart(); // Call the function to initialize cart data
+var products;
+var inventory;
+
+
+
+function updateDateTime() {
+    const now = new Date();
+    const currentDateTime = now.toLocaleString();
+    $('#date').html(currentDateTime);
+}
+
+setInterval(updateDateTime, 1000);
+
+$.ajax({
+    url: "Frozen_products.xml",
+    method: "GET",
+    dataType: "text",
+    success: function(data) {
+        productData = data;
+        initializeData();
+    },
+    error: function(error) {
+        console.error("Error fetching product data:", error);
+    }
+});
+
+// Fetch inventory data from the XML file
+
+$.ajax({
+    url: "Frozen_Inventory.xml",
+    method: "GET",
+    dataType: "text",
+    success: function(data) {
+        inventoryData = data;
+        initializeData();
+    },
+    error: function(error) {
+        console.error("Error fetching inventory data:", error);
+    }
+});
+  
+
+  console.log(inventoryData);
+
+
+  function initializeData() {
+  console.log(productData);
+  console.log(inventoryData);
+  if (productData && inventoryData) {
+    var parser = new DOMParser();
+
+    // Parse product data
+    var productXmlDoc = parser.parseFromString(productData, "text/xml");
+    products = productXmlDoc.querySelectorAll("product");
+
+    // Parse inventory data
+    var inventoryXmlDoc = parser.parseFromString(inventoryData, "text/xml");
+    inventory = {};
+    var inventoryProducts = inventoryXmlDoc.querySelectorAll("product");
+
+
+    for (var i = 0; i < inventoryProducts.length; i++) {
+      var productName = inventoryProducts[i].getAttribute("name");
+      var productQuantity = parseInt(
+        inventoryProducts[i].getAttribute("quantity"),
+        10
+      );
+      inventory[productName] = productQuantity;
+    }
+
+
+    console.log(inventory);
+
+    // Call the function to create product cards after data is initialized
+    createProductCards('all');
+  }
+}
+
+function createProductCards(category) {
+    const productGrid = $('#product-grid');
+    productGrid.empty(); // Clear existing products
+
+    $.each(products, function(i, product) {
+        const productCategory = $(product).find('category').text();
+
+        // Check if the product belongs to the selected category or if 'All Products' is selected
+        if (category === 'all' || productCategory === category) {
+            const name = $(product).find('name').text();
+            const image = $(product).find('image').text();
+            const price = parseFloat($(product).find('price').text());
+
+            const productItem = $('<div class="product-item" data-category="' + productCategory + '">').html(`
+                <img src="${image}" alt="${name}">
+                <p>${name}</p>
+                <p>Price: $${price.toFixed(2)}</p>
+                <button onclick="addToCart('${name}', ${price}, '${productCategory}','${source}')">Add to Cart</button>
+            `);
+
+            productGrid.append(productItem);
+        }
+    });
+}
+
+
+$('.category-navigation a').on('click', function(event) {
+    event.preventDefault();
+    const selectedCategory = $(this).data('category');
+    $('#article-heading').text(selectedCategory === 'all' ? 'All Products' : selectedCategory);
+    createProductCards(selectedCategory);
+  });
+
+
+
+document.getElementById('article-heading').textContent = 'All Products';
+createProductCards('all');
+
+console.log(productData);
+console.log(inventoryData);
+
+
+  // const categoryLinks = document.querySelectorAll('[data-category]');
+  //   categoryLinks.forEach(link => {
+  //     link.addEventListener('click', function (event) {
+  //       event.preventDefault();
+  //       const selectedCategory = this.getAttribute('data-category');
+  //       const productItems = document.querySelectorAll('.product-item');
+  //       productItems.forEach(item => {
+  //         const itemCategory = item.getAttribute('data-category');
+  //         if (selectedCategory === 'all' || selectedCategory === itemCategory) {
+  //           item.style.display = 'block';
+  //         } else {
+  //           item.style.display = 'none';
+  //         }
+  //         document.getElementById('article-heading').textContent = selectedCategory;
+  //       });
+  //     });
+  //   });
+
+
+
+//     function initializeCart() {
+//   try {
+//     var cartData = localStorage.getItem('cart');
+//     return cartData ? JSON.parse(cartData) : {}; // Provide a default empty object if cartData is undefined
+//   } catch (error) {
+//     console.error('Error parsing cart data from local storage:', error);
+//     return {}; // Provide a default empty object in case of errors
+//   }
+// }
+var source  = "Frozen_Inventory.xml";
+
+var cart = initializeCart(); // Call the function to initialize cart data
+
+// Define inventory for products
+// var inventory = {
+//   // Apples: 3, // Set the initial inventory for Apples to 10
+//   // Beans: 20,  // Set the initial inventory for Beans to 20
+//   // Broccoli : 10,
+//   // precutwatermelon : 4,
+//   eggandcheese : 2,
+//   croissantcrust  : 3,
+//   Oncor_patties : 5,
+//   homestyle_bakes : 4,
+//   corndogs : 8,
+//   pizzasnack : 5,
+//   taquitos : 9,
+//   beef : 10,
+//   steak_umm : 8,
+//   specialpizza : 9,
+//   cheesepizza : 11,
+//   pepperoni_pizza : 6,
+//   Buffalochicken : 4,
+//   ChickenAlfredo : 10,
+//   Honey_Roasted : 12,
+//   dipped : 8,
+//   oatmilk : 6,
+//   sodelicious : 7,
+//   // Add more products and their initial inventory here
+// };
+
+function updateInventory(itemName, quantity, source) {
+  if (inventory[itemName] !== undefined) {
+    inventory[itemName] -= quantity;
+    inventory[source] = source;
+  }
+}
+
+// Now you can use the 'cart' and 'inventory' variables for your operations
+
+function addToCart(itemName, itemPrice, itemCategory, itemSource) {
+  // Check if the item is in stock
+  if (inventory[itemName] === undefined || inventory[itemName] === 0) {
+    alert(itemName + " is out of stock.");
+    return; // Don't add the item to the cart if it's out of stock
+  }
+
+  // Modify item name to remove spaces or replace with underscores
+  const modifiedItemName = itemName.replace(/ /g, '_');
+
+  if (!cart[modifiedItemName]) {
+    cart[modifiedItemName] = {
+      price: itemPrice,
+      category: itemCategory,
+      quantity: 1,
+      source : 'Frozen_Inventory.xml'
+    };
+  } else {
+    cart[modifiedItemName].quantity++;
+  }
+
+  // Update the inventory
+  updateInventory(itemName, 1);
+
+  // Update the local storage
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(itemName + " added to cart! (Source: " + itemSource + ")");
+  console.log(inventory);
+
+
+
+
+  ///update 
+
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // Handle the response from the server, if needed
+      console.log(xhr.responseText);
+    }
+  };
+
+  // const data = `itemName=${encodeURIComponent(itemName)}&itemPrice=${encodeURIComponent(itemPrice)}&itemCategory=${encodeURIComponent(itemCategory)}`;
+  // xhr.open('POST', 'frozen.php', true);
+  // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  // console.log(data);
+  // xhr.send(data);
+  const itemQuantity = 1;
+  // Prepare data to send to the PHP file
+  const data = `itemName=${encodeURIComponent(itemName)}&itemPrice=${encodeURIComponent(itemPrice)}&itemCategory=${encodeURIComponent(itemCategory)}&itemQuantity=${encodeURIComponent(itemQuantity)}`;
+  console.log(data);
+  // xhr.open('POST', 'fresh.php', true);
+  xhr.open('POST', 'update_cart.php', true)
+  // xhr.open('POST', 'fresh_inventorydb.php', true)
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  console.log(data);
+  xhr.send(data);
+}
+
+
+</script>
+</body>
+</html>

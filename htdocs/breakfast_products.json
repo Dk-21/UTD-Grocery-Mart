@@ -1,0 +1,113 @@
+{
+    "products": [
+      {
+        "name": "Lino",
+        "category": "Cereal_Shop",
+        "image": "CerealandBreakfast/Lino.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "crunchy",
+        "category": "Cereal_Shop",
+        "image": "CerealandBreakfast/crunchy.jpg",
+        "price": 11.99
+      },
+      {
+        "name": "frosted",
+        "category": "Cereal_Shop",
+        "image": "CerealandBreakfast/frosted.jpg",
+        "price": 9.99
+      },
+      {
+        "name": "rainbow",
+        "category": "Cereal_Shop",
+        "image": "CerealandBreakfast/rainbow.jpg",
+        "price": 13.99
+      },
+      {
+        "name": "hungryjack",
+        "category": "Pancakes_and_Waffles",
+        "image": "CerealandBreakfast/hungryjack.jpg",
+        "price": 15.99
+      },
+      {
+        "name": "buttermilk",
+        "category": "Pancakes_and_Waffles",
+        "image": "CerealandBreakfast/buttermilk.jpg",
+        "price": 16.99
+      },
+      {
+        "name": "Bisquick",
+        "category": "Pancakes_and_Waffles",
+        "image": "CerealandBreakfast/Bisquick.jpg",
+        "price": 15.99
+      },
+      {
+        "name": "birchbender",
+        "category": "Pancakes_and_Waffles",
+        "image": "CerealandBreakfast/birchbender.jpg",
+        "price": 17.99
+      },
+      {
+        "name": "epic",
+        "category": "breakfast_breads",
+        "image": "CerealandBreakfast/epic.jpg",
+        "price": 2.99
+      },
+      {
+        "name": "crafted",
+        "category": "breakfast_breads",
+        "image": "CerealandBreakfast/crafted.jpg",
+        "price": 3.99
+      },
+      {
+        "name": "farmhouse",
+        "category": "breakfast_breads",
+        "image": "CerealandBreakfast/farmhouse.jpg",
+        "price": 2.49
+      },
+      {
+        "name": "babka",
+        "category": "breakfast_breads",
+        "image": "CerealandBreakfast/babka.jpg",
+        "price": 3.49
+      },
+      {
+        "name": "jimdandy",
+        "category": "Oatmeal_and_grits",
+        "image": "CerealandBreakfast/jimdandy.jpg",
+        "price": 5.49
+      },
+      {
+        "name": "auntjemima",
+        "category": "Oatmeal_and_grits",
+        "image": "CerealandBreakfast/auntjemima.jpg",
+        "price": 5.49
+      },
+      {
+        "name": "thrive",
+        "category": "Oatmeal_and_grits",
+        "image": "CerealandBreakfast/thrive.jpg",
+        "price": 6.49
+      },
+      {
+        "name": "thinkthin",
+        "category": "Oatmeal_and_grits",
+        "image": "CerealandBreakfast/thinkthin.jpg",
+        "price": 19.99
+      },
+      {
+        "name": "rollback1",
+        "category": "rollbacks",
+        "image": "CerealandBreakfast/rollback1.jpg",
+        "price": 8.99
+      },
+      {
+        "name": "rollback2",
+        "category": "rollbacks",
+        "image": "CerealandBreakfast/rollback2.jpg",
+        "price": 6.99
+      }
+    ]
+  }
+  

@@ -1,0 +1,121 @@
+{
+    "products": [
+      {
+        "name": "leaf_spinach",
+        "category": "canned_goods",
+        "image": "pantry/canned_good1.jpg",
+        "price": 7.99
+      },
+      {
+        "name": "Whole_Kernel_Corn",
+        "category": "canned_goods",
+        "image": "pantry/canned_good2.jpg",
+        "price": 8.99
+      },
+      {
+        "name": "Sardines",
+        "category": "canned_goods",
+        "image": "pantry/Sardines.jpg",
+        "price": 9.99
+      },
+      {
+        "name": "Canned_Vegetables",
+        "category": "canned_vegetables",
+        "image": "pantry/mixedveg.jpg",
+        "price": 11.99
+      },
+      {
+        "name": "Canned_Vegetables_Peas&Carrots",
+        "category": "canned_vegetables",
+        "image": "pantry/peasandcarrot.png",
+        "price": 13.99
+      },
+      {
+        "name": "Canned_Vegetables_Whole_Potato",
+        "category": "canned_vegetables",
+        "image": "pantry/wholepotato.jpg",
+        "price": 7.99
+      },
+      {
+        "name": "Hot_Sauce",
+        "category": "condiments",
+        "image": "pantry/hotsauce.jpg",
+        "price": 9.99
+      },
+      {
+        "name": "PeriPeri",
+        "category": "condiments",
+        "image": "pantry/periperi.jpg",
+        "price": 10.99
+      },
+      {
+        "name": "Horseradish_Sauce",
+        "category": "condiments",
+        "image": "pantry/horseradish.jpg",
+        "price": 9.99
+      },
+      {
+        "name": "Peanut_Butter_Skippy",
+        "category": "peannutbutterandspread",
+        "image": "pantry/skippy.jpg",
+        "price": 6.99
+      },
+      {
+        "name": "Peanut_Butter_Squeeze",
+        "category": "peannutbutterandspread",
+        "image": "pantry/mrsmiller.jpg",
+        "price": 5.99
+      },
+      {
+        "name": "Peanut-Free_Spread_Voyage",
+        "category": "peannutbutterandspread",
+        "image": "pantry/voyage.jpg",
+        "price": 4.99
+      },
+      {
+        "name": "H-E-B_Peanut_Butter",
+        "category": "peannutbutterandspread",
+        "image": "pantry/heb.jpg",
+        "price": 7.99
+      },
+      {
+        "name": "Banquet_Homestyle_Bakes_Pizza_Pasta",
+        "category": "pastaandpizza",
+        "image": "pantry/banquetpasta.jpg",
+        "price": 3.55
+      },
+      {
+        "name": "Rustichella_Pasta&Pizza",
+        "category": "pastaandpizza",
+        "image": "pantry/Rustichella.jpg",
+        "price": 7.55
+      },
+      {
+        "name": "Thick_Pizza_Crusts",
+        "category": "pastaandpizza",
+        "image": "pantry/thickpizzacrust.jpg",
+        "price": 4.55
+      },
+      {
+        "name": "Thin_Crust_Supreme_Frozen_Pizza_(17.75oz)",
+        "category": "pastaandpizza",
+        "image": "pantry/thincrust.jpg",
+        "price": 5.55
+      },
+      {
+        "name": "Tomato_Ketchup",
+        "category": "rollbacks",
+        "image": "pantry/ketchup.jpg",
+        "price": 7.99,
+        "discountedPrice": 7.99
+      },
+      {
+        "name": "Gourmet_Mustard",
+        "category": "rollbacks",
+        "image": "pantry/mustard.jpg",
+        "price": 4.99,
+        "discountedPrice": 4.99
+      }
+    ]
+  }
+  

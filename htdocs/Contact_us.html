@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UTD Mart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="mystyle.css">
+
+</head>
+<body>
+
+
+<header>
+  <h2>UTD Mart</h2>
+  <!-- <h2>Denish Kalariya</h2>
+  <h2>dmk220001</h2>
+  <h2>CS614</h2> -->
+  <p align="left" id="date"></p>
+</header>
+
+
+<div class="topnav">
+  <a  href="Fresh_Products.html">Fresh Products</a>
+  <a  href="Frozen.html">Frozen</a>
+  <a href="Pantry.html">Pantry</a>
+  <a  href="BreakfastandCereal.html">Breakfast & Cereal</a>
+  <a  href="Baking.html">Baking</a>
+  <a  href="Snacks.html">Snacks</a>
+  <a  href="Candy.html">Candy</a>
+  <a  href="Specialty_shop.html">Specialty Shop</a>
+  <a  href="Deals.html">Deals</a>
+  <a  href="My_account.html">My Account</a>
+  <a  href="About_us.html">About us</a>
+  <a  class="active" href="Contact_us.html">Contact Us</a>
+  <a href="cart.html">
+    <i class="fa fa-shopping-cart"></i> Cart
+</a>
+</div>
+
+
+<section>
+  <nav>
+    <ul>
+      <img src="contactus.jpg" alt="Frozen" >
+      <br/>
+      <br/>
+      <h2>Contact US</h2>
+      <li>Email : utdmart123@gmail.com</li>
+      <li>Phone : (000)-1111-222</li>
+      <li>Address : 800 W. Campbell Road
+        Richardson, Texas 75080-3021</li>
+      
+    </ul>
+  </nav>
+  <article>
+    <h1>Contact US</h1>
+  <p>
+Thank you for providing your contact information for UTD Mart. Here's the updated "Contact UTD Mart" section with your details:
+Contact UTD Mart
+We value your feedback, questions, and inquiries. At UTD Mart, we're dedicated to providing exceptional customer service and assisting you in any way we can. Please feel free to reach out to us through the following contact methods:
+<h1>Customer Support</h1>
+Our customer support team is here to assist you with any concerns or inquiries you may have. Whether it's a product question, a service request, or feedback, we're ready to help.
+<br/>
+<table>
+  <tr>
+    <th>Contact No.</th>
+    <th>Email ID</th>
+    <th>Address</th>
+  </tr>
+  <tr>
+    <td>(000)-111-2222</td>
+    <td>utdmart123@gmail.com</td>
+    <td>800 W. Campbell Road Richardson, Texas 75080-3021</td>
+  </tr>
+</table>
+ <h2>Feedback and Suggestions</h2>
+ We value your input and strive to continuously improve our services. If you have any suggestions or comments, please let us know. 
+<!-- <br/> -->
+<!-- <form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <label for="email">Email :</label><br>
+  <input type="text" id="email" name="email"><br>
+</form> -->
+<!-- <br/> -->
+<!-- <input type="submit" value="Send Request" /><br> -->
+<!-- Thank you for choosing UTD Mart. We look forward to serving you and hearing from you soon! -->
+  <!-- </p> -->
+
+  <form id="contactForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br>
+      <br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br>
+    <br>
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" pattern="\(\d{3}\) \d{3}-\d{4}" required><br>
+    <br>
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Female</label><br>
+    <br>
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required><br>
+    <br>
+    <label for="comment">Comment:</label>
+    <textarea id="comment" name="comment" rows="3" required></textarea><br>
+  
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent the form from submitting by default
+      
+      // Get form inputs
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const email = document.getElementById("email").value;
+      const comment = document.getElementById("comment").value;
+
+      // Regular expressions for validation
+      const namePattern = /^[A-Z][a-zA-Z]*$/;
+      const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+      const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+      // Validation checks
+      let isValid = true;
+      const errorMessages = [];
+
+      if (!namePattern.test(firstName) || !namePattern.test(lastName)) {
+        errorMessages.push("First name and last name should be alphabetic and start with a capital letter.");
+        isValid = false;
+      }
+
+      if (firstName === lastName) {
+        errorMessages.push("First name and last name cannot be the same.");
+        isValid = false;
+      }
+
+      if (!phonePattern.test(phoneNumber)) {
+        errorMessages.push("Phone number must be in the format (123) 456-7890.");
+        isValid = false;
+      }
+
+      if (!emailPattern.test(email)) {
+        errorMessages.push("Invalid email address.");
+        isValid = false;
+      }
+
+      if (!gender) {
+        errorMessages.push("Please select a gender.");
+        isValid = false;
+      }
+
+      if (comment.length < 10) {
+        errorMessages.push("Comment must be at least 10 characters.");
+        isValid = false;
+      }
+
+      if (!isValid) {
+        // Display error messages to the user
+        alert(errorMessages.join("\n"));
+      } else {
+        alert("Form submitted successfully!");
+      }
+    });
+  </script>
+  </article>
+</section>
+
+<footer>
+  <p align="left">DMK220001, Denish Kalariya, CS6314.001</p>
+  <p>Thank you for Visiting my website</p>
+</footer>
+
+
+<script>
+  // Get the current date and time
+  function updateDateTime() {
+            const now = new Date();
+            const currentDateTime = now.toLocaleString();
+            document.getElementById('date').innerHTML = currentDateTime;
+      }
+      setInterval(updateDateTime, 1000);
+</script>
+</body>
+</html>
+

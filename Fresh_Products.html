@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UTD Mart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="mystyle.css">
+
+</head>
+<body>
+
+
+<header>
+  <h2><Strong>UTD Mart</Strong></h2>
+  <!-- <h2>Denish Kalariya</h2>
+  <h2>dmk220001</h2>
+  <h2>CS614</h2> -->
+  <p align="left" id="date"></p>
+
+</header>
+
+<div class="topnav">
+    <a  class="active" href="Fresh_Products.html">Fresh Products</a>
+    <a  href="Frozen.html">Frozen</a>
+    <a href="Pantry.html">Pantry</a>
+    <a  href="BreakfastandCereal.html">Breakfast & Cereal</a>
+    <a  href="Baking.html">Baking</a>
+    <a  href="Snacks.html">Snacks</a>
+    <a  href="Candy.html">Candy</a>
+    <a  href="Specialty_shop.html">Specialty Shop</a>
+    <a  href="Deals.html">Deals</a>
+    <a  href="My_account.html">My Account</a>
+    <a  href="About_us.html">About us</a>
+    <a  href="Contact_us.html">Contact Us</a>
+
+    <a href="cart.html">
+      <i class="fa fa-shopping-cart"></i> Cart
+  </a>
+  </div>
+  
+
+
+<section>
+  <nav class="category-navigation">
+    <ul>
+      <img src="fresh_products.jpg" alt="Frozen" width="90%" height="240" padding-right="10">
+      <!-- <br/>
+      <br/>
+      <h2>Fresh Fruits</h2>
+      <li>Apples</li> 
+      <li>Avocados</li>
+      <li>Bananas</li>
+      <li>Berries</li>
+      <li>Grapefruit</li>
+      <li>Grapes</li>
+      <li>Kiwi</li>
+      <li>Mangos</li>
+
+      <h2>Fresh Vegetables</h2>
+      <li>Asparagus</li> 
+      <li>Beans</li>
+      <li>Beets</li>
+      <li>Broccoli</li>
+      <li>Carrots</li>
+      <li>Cauliflower</li>
+    </ul> -->
+    <h2>Shop by Category</h2>
+      <ul>
+        <li><a href="#" data-category="all">All Products</a></li>
+        <li><a href="#" data-category="fruits">Fresh Fruits</a></li>
+        <li><a href="#" data-category="vegetables">Fresh Vegetables</a></li>
+        <li><a href="#" data-category="pre-cut">Pre-Cut Fruits</a></li>
+        <li><a href="#" data-category="flower">Flower</a></li>
+        <li><a href="#" data-category="Salsa_and_Dips">Salsa and Dips</a></li>
+        <li><a href="#" data-category="Season_Produce">Season produce</a></li>
+        <li><a href="#" data-category="New_Items">New Items</a></li>
+        <li><a href="#" data-category="rollback">Rollback</a></li>
+        <!-- <li><a href="#" data-category="rollback">Season pr</a></li> -->
+        <!-- Add more category links as needed -->
+      </ul>
+  </nav>
+
+  
+
+  
+  <article>
+
+    <!-- <h1>Products</h1> -->
+    <h2 align="center" id="article-heading">Fresh Products</h2> 
+    
+
+      <div class="product-grid" id="product-grid">
+
+        <!-- <div class="product-item" data-category="fruits">
+          <img src="Freshproductsimages/apples.jpg" alt="apple">
+          <p>Apples</p>
+          <p>Price: $10.99</p>
+          <button onclick="addToCart('Apples', 10.99, 'fruits')">Add to Cart</button>
+        </div>
+
+        <div class="product-item" data-category="fruits">
+          <img src="Freshproductsimages/oranges.jpg" alt="oranges">
+          <p>Oranges</p>
+          <p>Price: $7.99</p>
+          <button onclick="addToCart('oranges', 7.99, 'fruits')">Add to Cart</button>
+        </div>
+
+        <div class="product-item" data-category="fruits">
+          <img src="Freshproductsimages/bananas.jpg" alt="bananas">
+          <p>Bananas</p>
+          <p>Price: $4.99</p>
+          <button onclick="addToCart('Bananas', 4.99, 'fruits')">Add to Cart</button>
+        </div>
+
+        
+        
+        <div class="product-item" data-category="vegetables">
+          <img src="Freshproductsimages/broccoli.jpg" alt="Broccoli">
+          <p>Broccoli</p>
+          <p>Price: $9.99</p>
+          <button onclick="addToCart('Broccoli', 9.99, 'vegetables')">Add to Cart</button>
+        </div>
+
+        <div class="product-item" data-category="vegetables">
+          <img src="Freshproductsimages/beans.jpg" alt="Beans">
+          <p>Beans</p>
+          <p>Price: $12.99</p>
+          <button onclick="addToCart('Beans', 12.99, 'vegetables')">Add to Cart</button>
+        </div>
+
+
+        <div class="product-item" data-category="vegetables">
+          <img src="Freshproductsimages/corn.jpg" alt="Corn">
+          <p>Corn</p>
+          <p>Price: $9.99</p>
+          <button onclick="addToCart('Corn', 9.99, 'vegetables')">Add to Cart</button>
+        </div>
+
+
+        <div class="product-item" data-category="fruits">
+          <img src="Freshproductsimages/strawberries.png" alt="Strawberries">
+          <p>Strawberry</p>
+          <p>Price: $9.99</p>
+          <button onclick="addToCart('Strawberries', 9.99, 'fruits')">Add to Cart</button>
+        </div>
+
+
+        <div class="product-item" data-category="vegetables" >
+          <img src="Freshproductsimages/tomatoes.jpg" alt="Tomatoes">
+          <p>Tomatoes</p>
+          <p>Price: $3.99</p>
+          <button onclick="addToCart('Tomatoes', 3.99, 'vegetables')">Add to Cart</button>
+        </div>
+
+
+        <div class="product-item" data-category="fruits">
+          <img src="Freshproductsimages/watermelon.jpg" alt="Watermelon">
+          <p>Watermelon</p>
+          <p>Price: $9.99</p>
+          <button onclick="addToCart('Watermelon', 9.99, 'fruits')">Add to Cart</button>
+        </div>
+
+
+        <div class="product-item" data-category="vegetables">
+          <img src="Freshproductsimages/carrots.jpg" alt="Carrots">
+          <p>Carrots</p>
+          <p>Price: $9.99</p>
+          <button onclick="addToCart('Carrots', 9.99, 'vegetables')">Add to Cart</button>
+        </div>
+
+        <div class="product-item" data-category="pre-cut">
+          <img src="Freshproductsimages/blendfruits.jpg" alt="blendfruits">
+          <p>Fruit Blend</p>
+          <p>Price: $9.99</p>
+          <button onclick="addToCart('Fruits_Blend', 9.99, 'pre-cut')">Add to Cart</button>
+        </div>
+
+
+        <div class="product-item" data-category="pre-cut">
+          <img src="Freshproductsimages/precutwatermelon.jpg" alt="precutwatermelon">
+          <p>Pre-Cut Watermelon</p>
+          <p>Price: $9.99</p>
+          <button onclick="addToCart('precutwatermelon', 9.99, 'pre-cut')">Add to Cart</button>
+        </div>
+
+
+        <div class="product-item" data-category="rollback">
+          <img src="Freshproductsimages/cucumber.jpg" alt="cucumber">
+          <p>6 Nos. Cucumber</p>
+          <p><s>Price: $7.99</s></p>
+          <p>Price : $4.99</p>
+          <button onclick="addToCart('cucumber', 4.99, 'rollback')">Add to Cart</button>
+        </div>
+
+        <div class="product-item" data-category="rollback">
+          <img src="Freshproductsimages/onions.jpg" alt="onions">
+          <p>bag of Onions</p>
+          <p><s>Price: $6.99</s></p>
+          <p>Price : $3.99</p>
+          <button onclick="addToCart('onions', 3.99, 'rollback')">Add to Cart</button>
+        </div>
+
+
+        <div class="product-item" data-category="rollback">
+          <img src="Freshproductsimages/tomatobag.jpg" alt="tomatobag">
+          <p>bag of tomatoes</p>
+          <p><s>Price: $7.99</s></p>
+          <p>Price : $5.99</p>
+          <button onclick="addToCart('bagtomatoes', 5.99, 'rollback')">Add to Cart</button>
+        </div>
+
+
+
+       
+
+        <div class="product-item" data-category="Salsa_and_Dips">
+          <img src="Freshproductsimages/dip1.jpg" alt="salsaanddips">
+          <p>Tostitos Dip, Salsa Con Queso, Medium 15 oz</p>
+          <p>Price : $5.99</p>
+          <button onclick="addToCart('tostitos', 5.99, 'Salsa_and_Dips')">Add to Cart</button>
+        </div>
+
+        <div class="product-item" data-category="Salsa_and_Dips">
+          <img src="Freshproductsimages/queso.jpg" alt="salsaanddips">
+          <p>365 By Whole Foods Market, Organic Shelf-Stable Dips, Salsa Con</p>
+          <p>Price : $6.99</p>
+          <button onclick="addToCart('queso', 6.99, 'Salsa_and_Dips')">Add to Cart</button>
+        </div>
+
+      
+
+        <div class="product-item" data-category="flower">
+          <img src="Freshproductsimages/cauli.jpg" alt="cauli">
+          <p>Cauliflower</p>
+          <p>Price : $4.99</p>
+          <button onclick="addToCart('cauli', 4.99, 'flower')">Add to Cart</button>
+        </div>
+
+
+        <div class="product-item" data-category="Season_Produce">
+          <img src="Freshproductsimages/pumpkin.jpg" alt="pumpkin">
+          <p>Pumpkin</p>
+          <p>Price : $5.99</p>
+          <button onclick="addToCart('pumpkin', 5.99, 'Season_Produce')">Add to Cart</button>
+        </div>
+
+        <div class="product-item" data-category="Season_Produce">
+          <img src="Freshproductsimages/avacado.jpg" alt="ava">
+          <p>Avacado</p>
+          <p>Price : $9.99</p>
+          <button onclick="addToCart('ava', 5.99, 'Season_Produce')">Add to Cart</button>
+        </div>
+
+
+
+       
+        <div class="product-item" data-category="New_Items">
+          <img src="Freshproductsimages/Dragon.jpg" alt="dragon">
+          <p>Dragon Fruit</p>
+          <p>Price : $8.99</p>
+          <button onclick="addToCart('dragon', 8.99, 'New_Items')">Add to Cart</button>
+        </div>
+
+        <div class="product-item" data-category="New_Items">
+          <img src="Freshproductsimages/greenapple.jpg" alt="greenapple">
+          <p>Green Apple</p>
+          <p>Price : $6.99</p>
+          <button onclick="addToCart('greenapple', 6.99, 'New_Items')">Add to Cart</button>
+        </div>
+       
+      </div> -->
+
+  </article>
+</section>
+
+<footer>
+  <p align="left">DMK220001, Denish Kalariya, CS6314.001</p>
+  <p>Thank you for Visiting my website</p>
+</footer>
+
+
+<script>
+
+
+// var xmlData = `
+//     <data>
+//     <products>
+//     <product>
+//     <name>Apples</name>
+//     <image>Freshproductsimages/apples.jpg</image>
+//     <category>fruits</category>
+//     <price>10.99</price>
+//   </product>
+//   <product>
+//     <name>Oranges</name>
+//     <image>Freshproductsimages/oranges.jpg</image>
+//     <category>fruits</category>
+//     <price>7.99</price>
+//   </product>
+//   <product>
+//     <name>Bananas</name>
+//     <image>Freshproductsimages/bananas.jpg</image>
+//     <category>fruits</category>
+//     <price>4.99</price>
+//   </product>
+//   <product>
+//     <name>Broccoli</name>
+//     <image>Freshproductsimages/broccoli.jpg</image>
+//     <category>vegetables</category>
+//     <price>9.99</price>
+//   </product>
+//   <product>
+//     <name>Beans</name>
+//     <image>Freshproductsimages/beans.jpg</image>
+//     <category>vegetables</category>
+//     <price>12.99</price>
+//   </product>
+//   <product>
+//     <name>Corn</name>
+//     <image>Freshproductsimages/corn.jpg</image>
+//     <category>vegetables</category>
+//     <price>9.99</price>
+//   </product>
+//   <product>
+//     <name>Strawberry</name>
+//     <image>Freshproductsimages/strawberries.png</image>
+//     <category>fruits</category>
+//     <price>9.99</price>
+//   </product>
+//   <product>
+//     <name>Tomatoes</name>
+//     <image>Freshproductsimages/tomatoes.jpg</image>
+//     <category>vegetables</category>
+//     <price>3.99</price>
+//   </product>
+//   <product>
+//     <name>Watermelon</name>
+//     <image>Freshproductsimages/watermelon.jpg</image>
+//     <category>fruits</category>
+//     <price>9.99</price>
+//   </product>
+//   <product>
+//     <name>Carrots</name>
+//     <image>Freshproductsimages/carrots.jpg</image>
+//     <category>vegetables</category>
+//     <price>9.99</price>
+//   </product>
+//   <product>
+//     <name>Fruit_Blend</name>
+//     <image>Freshproductsimages/blendfruits.jpg</image>
+//     <category>pre-cut</category>
+//     <price>9.99</price>
+//   </product>
+//   <product>
+//     <name>PreCut_Watermelon</name>
+//     <image>Freshproductsimages/precutwatermelon.jpg</image>
+//     <category>pre-cut</category>
+//     <price>9.99</price>
+//   </product>
+//   <product>
+//     <name>Cucumber</name>
+//     <image>Freshproductsimages/cucumber.jpg</image>
+//     <category>rollback</category>
+//     <price>4.99</price>
+//   </product>
+//   <product>
+//     <name>Onions</name>
+//     <image>Freshproductsimages/onions.jpg</image>
+//     <category>rollback</category>
+//     <price>3.99</price>
+//   </product>
+//   <product>
+//     <name>tomatobag</name>
+//     <image>Freshproductsimages/tomatobag.jpg</image>
+//     <category>rollback</category>
+//     <price>5.99</price>
+//   </product>
+//   <product>
+//     <name>Tostitos</name>
+//     <image>Freshproductsimages/dip1.jpg</image>
+//     <category>Salsa_and_Dips</category>
+//     <price>5.99</price>
+//   </product>
+//   <product>
+//     <name>Queso</name>
+//     <image>Freshproductsimages/queso.jpg</image>
+//     <category>Salsa_and_Dips</category>
+//     <price>6.99</price>
+//   </product>
+//   <product>
+//     <name>Cauliflower</name>
+//     <image>Freshproductsimages/cauli.jpg</image>
+//     <category>flower</category>
+//     <price>4.99</price>
+//   </product>
+//   <product>
+//     <name>Pumpkin</name>
+//     <image>Freshproductsimages/pumpkin.jpg</image>
+//     <category>Season_Produce</category>
+//     <price>5.99</price>
+//   </product>
+//   <product>
+//     <name>Avocado</name>
+//     <image>Freshproductsimages/avacado.jpg</image>
+//     <category>Season_Produce</category>
+//     <price>9.99</price>
+//   </product>
+//   <product>
+//     <name>Dragon_Fruit</name>
+//     <image>Freshproductsimages/Dragon.jpg</image>
+//     <category>New_Items</category>
+//     <price>8.99</price>
+//   </product>
+//   <product>
+//     <name>Green_Apple</name>
+//     <image>Freshproductsimages/greenapple.jpg</image>
+//     <category>New_Items</category>
+//     <price>6.99</price>
+//     </product>
+//   </products>
+//   <data>`
+
+  function updateDateTime() {
+            const now = new Date();
+            const currentDateTime = now.toLocaleString();
+            document.getElementById('date').innerHTML = currentDateTime;
+      }
+      setInterval(updateDateTime, 1000);
+
+var productData = ""; // Empty string for now
+var inventoryData = ""; // Empty string for now
+// var cart = {};
+function initializeCart() {
+  try {
+    var cartData = localStorage.getItem('cart');
+    return cartData ? JSON.parse(cartData) : {}; // Provide a default empty object if cartData is undefined
+  } catch (error) {
+    console.error('Error parsing cart data from local storage:', error);
+    return {}; // Provide a default empty object in case of errors
+  }
+}
+
+// Fetch existing cart data from local storage
+var cart = initializeCart(); // Call the function to initialize cart data
+var products;
+var inventory;
+
+// Fetch product data from the XML file
+// var productXhr = new XMLHttpRequest();
+// productXhr.onreadystatechange = function () {
+//   if (productXhr.readyState == 4 && productXhr.status == 200) {
+//     productData = productXhr.responseText;
+//     initializeData();
+//   }
+// };
+// productXhr.open("GET", "fresh_products.xml", true);
+// productXhr.send();
+
+// // Fetch inventory data from the XML file
+// var inventoryXhr = new XMLHttpRequest();
+// inventoryXhr.onreadystatechange = function () {
+//   if (inventoryXhr.readyState == 4 && inventoryXhr.status == 200) {
+//     inventoryData = inventoryXhr.responseText;
+//     initializeData();
+//   }
+// };
+
+// inventoryXhr.open("GET", "fresh_inventory.xml", true);
+// inventoryXhr.send();
+
+// // Parse product and inventory data
+// var products;
+// var inventory;
+
+fetch("fresh_products.xml")
+  .then((response) => response.text())
+  .then((data) => {
+    productData = data;
+    initializeData();
+  })
+  .catch((error) => console.error("Error fetching product data:", error));
+
+  
+// Fetch inventory data from the XML file
+fetch("fresh_inventory.xml")
+  .then((response) => response.text())
+  .then((data) => {
+    inventoryData = data;
+    initializeData();
+  })
+  .catch((error) => console.error("Error fetching inventory data:", error));
+
+// Parse product and inventory data
+
+// console.log(productData);
+console.log(productData);
+console.log(inventoryData);
+
+function initializeData() {
+  console.log(productData);
+  console.log(inventoryData);
+  if (productData && inventoryData) {
+    var parser = new DOMParser();
+
+    // Parse product data
+    var productXmlDoc = parser.parseFromString(productData, "text/xml");
+    products = productXmlDoc.querySelectorAll("product");
+
+    // Parse inventory data
+    var inventoryXmlDoc = parser.parseFromString(inventoryData, "text/xml");
+    inventory = {};
+    var inventoryProducts = inventoryXmlDoc.querySelectorAll("product");
+
+
+    for (var i = 0; i < inventoryProducts.length; i++) {
+      var productName = inventoryProducts[i].getAttribute("name");
+      var productQuantity = parseInt(
+        inventoryProducts[i].getAttribute("quantity"),
+        10
+      );
+      inventory[productName] = productQuantity;
+    }
+
+
+    console.log(inventory);
+
+    // Call the function to create product cards after data is initialized
+    createProductCards('all');
+  }
+}
+
+var source  = "fresh_inventory.xml";
+
+
+function createProductCards(category) {
+  const productGrid = document.getElementById('product-grid');
+  productGrid.innerHTML = ''; // Clear existing products
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+    const productCategory = product.querySelector('category').textContent;
+
+    // Check if the product belongs to the selected category or if 'All Products' is selected
+    if (category === 'all' || productCategory === category) {
+      const name = product.querySelector('name').textContent;
+      const image = product.querySelector('image').textContent;
+      const price = parseFloat(product.querySelector('price').textContent);
+
+      const productItem = document.createElement('div');
+      productItem.classList.add('product-item');
+      productItem.setAttribute('data-category', productCategory);
+
+      productItem.innerHTML = `
+        <img src="${image}" alt="${name}">
+        <p>${name}</p>
+        <p>Price: $${price.toFixed(2)}</p>
+        <button onclick="addToCart('${name}', ${price}, '${productCategory}','${source}')">Add to Cart</button>
+      `;
+
+      productGrid.appendChild(productItem);
+    }
+  }
+}
+
+document.querySelectorAll('.category-navigation a').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    const selectedCategory = link.getAttribute('data-category');
+    document.getElementById('article-heading').textContent = selectedCategory === 'all' ? 'All Products' : selectedCategory;
+    createProductCards(selectedCategory);
+  });
+});
+
+// Initialize with 'All Products' when the page loads
+document.getElementById('article-heading').textContent = 'All Products';
+createProductCards('all');
+
+console.log(productData);
+console.log(inventoryData);
+
+
+//   function createProductCardsFromXML() {
+//   const parser = new DOMParser();
+//   const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
+
+//   const productGrid = document.getElementById('product-grid');
+
+//   const products = xmlDoc.getElementsByTagName('product');
+
+//   for (let i = 0; i < products.length; i++) {
+//     const product = products[i];
+
+//     const name = product.getElementsByTagName('name')[0].textContent;
+//     const image = product.getElementsByTagName('image')[0].textContent;
+//     const category = product.getElementsByTagName('category')[0].textContent;
+//     const price = parseFloat(product.getElementsByTagName('price')[0].textContent);
+
+//     const productItem = document.createElement('div');
+//     productItem.classList.add('product-item');
+//     productItem.setAttribute('data-category', category);
+
+//     productItem.innerHTML = `
+//       <img src="${image}" alt="${name}">
+//       <p>${name}</p>
+//       <p>Price: $${price.toFixed(2)}</p>
+//       <button onclick="addToCart('${name}', ${price}, '${category}')">Add to Cart</button>
+//     `;
+
+//     productGrid.appendChild(productItem);
+//   }
+// }
+
+function updateInventory(itemName, quantity, source) {
+  if (inventory[itemName] !== undefined) {
+    inventory[itemName] -= quantity;
+    inventory[source] = source;
+  }
+}
+
+// Function to add items to the cart
+function addToCart(itemName, itemPrice, itemCategory, itemSource) {
+  // Check if the item is in stock
+  if (inventory[itemName] === undefined || inventory[itemName] === 0) {
+    alert(itemName + " is out of stock.");
+    return; // Don't add the item to the cart if it's out of stock
+  }
+
+  // Modify item name to remove spaces or replace with underscores
+  const modifiedItemName = itemName.replace(/ /g, '_');
+
+  if (!cart[modifiedItemName]) {
+    cart[modifiedItemName] = {
+      price: itemPrice,
+      category: itemCategory,
+      quantity: 1,
+      source : 'fresh_inventory.xml'
+    };
+  } else {
+    cart[modifiedItemName].quantity++;
+  }
+
+  // Update the inventory
+  updateInventory(itemName, 1);
+
+  // Update the local storage
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(itemName + " added to cart! (Source: " + itemSource + ")");
+  console.log(inventory);
+
+
+  /// updation
+
+
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // Handle the response from the server, if needed
+      console.log(xhr.responseText);
+    }
+  };
+
+  const itemQuantity = 1;
+  // Prepare data to send to the PHP file
+  const data = `itemName=${encodeURIComponent(itemName)}&itemPrice=${encodeURIComponent(itemPrice)}&itemCategory=${encodeURIComponent(itemCategory)}&itemQuantity=${encodeURIComponent(itemQuantity)}`;
+  console.log(data);
+  // xhr.open('POST', 'fresh.php', true);
+  xhr.open('POST', 'update_cart.php', true)
+  // xhr.open('POST', 'fresh_inventorydb.php', true)
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  console.log(data);
+  xhr.send(data);
+}
+
+
+// function createProductCards(category) {
+//   const productGrid = document.getElementById('product-grid');
+//   productGrid.innerHTML = ''; // Clear existing products
+
+//   for (let i = 0; i < products.length; i++) {
+//     const product = products[i];
+//     const productCategory = product.querySelector('category').textContent;
+
+//     // Check if the product belongs to the selected category or if 'All Products' is selected
+//     if (category === 'all' || productCategory === category) {
+//       const name = product.querySelector('name').textContent;
+//       const image = product.querySelector('image').textContent;
+//       const price = parseFloat(product.querySelector('price').textContent);
+
+//       const productItem = document.createElement('div');
+//       productItem.classList.add('product-item');
+//       productItem.setAttribute('data-category', productCategory);
+
+//       productItem.innerHTML = `
+//         <img src="${image}" alt="${name}">
+//         <p>${name}</p>
+//         <p>Price: $${price.toFixed(2)}</p>
+//         <button onclick="addToCart('${name}', ${price}, '${productCategory}')">Add to Cart</button>
+//       `;
+
+//       productGrid.appendChild(productItem);
+//     }
+//   }
+// }
+
+
+
+
+// Call the function to create product cards
+// createProductCards();
+
+// function createProductCards() {
+//   const productGrid = document.getElementById("product-grid");
+
+//   for (let i = 0; i < products.length; i++) {
+//     const product = products[i];
+
+//     const name = product.querySelector("name").textContent;
+//     const image = product.querySelector("image").textContent;
+//     const category = product.querySelector("category").textContent;
+//     const price = parseFloat(product.querySelector("price").textContent);
+
+//     const productItem = document.createElement("div");
+//     productItem.classList.add("product-item");
+//     productItem.setAttribute("data-category", category);
+
+//     productItem.innerHTML = `
+//       <img src="${image}" alt="${name}">
+//       <p>${name}</p>
+//       <p>Price: $${price.toFixed(2)}</p>
+//       <button onclick="addToCart('${name}', ${price}, '${category}')">Add to Cart</button>
+//     `;
+
+//     productGrid.appendChild(productItem);
+//   }
+// }
+
+
+
+
+    
+
+
+
+// Function to retrieve and initialize cart data from local storage
+// function initializeCart() {
+//   try {
+//     var cartData = localStorage.getItem('cart');
+//     return cartData ? JSON.parse(cartData) : {}; // Provide a default empty object if cartData is undefined
+//   } catch (error) {
+//     console.error('Error parsing cart data from local storage:', error);
+//     return {}; // Provide a default empty object in case of errors
+//   }
+// }
+
+// var cart = initializeCart(); // Call the function to initialize cart data
+
+// // // Define inventory for products
+// var inventory = {
+//   Apples: 3, // Set the initial inventory for Apples to 10
+//   Oranges : 8,
+//   Bananas : 9,
+//   Broccoli : 7,
+//   Beans : 10,
+//   Corn : 10,
+//   Strawberry : 9,
+//   Tomatoes : 7,
+//   Watermelon: 10,
+//   Carrots : 8,
+//   Fruit_Blend : 10,
+//   PreCut_Watermelon : 10,
+//   Onions : 110,
+//   tomatobag : 10,
+//   Cauliflower : 9,
+//   Cucumber : 10,
+//   Tostitos : 9,
+//   Queso : 10,
+//   Pumpkin : 10,
+//   Avocado : 9,
+//   Dragon_Fruit : 10,
+//   Green_Apple : 8,
+
+
+//   // Add more products and their initial inventory here
+// };
+
+// function updateInventory(itemName, quantity) {
+//   if (inventory[itemName] !== undefined) {
+//     inventory[itemName] -= quantity;
+//   }
+// }
+
+// // Now you can use the 'cart' and 'inventory' variables for your operations
+
+// function addToCart(itemName, itemPrice, itemCategory) {
+//   // Check if the item is in stock
+//   if (inventory[itemName] === undefined || inventory[itemName] === 0) {
+//     alert(itemName + " is out of stock.");
+//     return; // Don't add the item to the cart if it's out of stock
+//   }
+
+//   // Modify item name to remove spaces or replace with underscores
+//   const modifiedItemName = itemName.replace(/ /g, '_');
+
+//   if (!cart[modifiedItemName]) {
+//     cart[modifiedItemName] = {
+//       price: itemPrice,
+//       category: itemCategory,
+//       quantity: 1
+//     };
+//   } else {
+//     cart[modifiedItemName].quantity++;
+//   }
+
+//   // Update the inventory
+//   updateInventory(itemName, 1);
+
+//   // Update the local storage
+//   localStorage.setItem('cart', JSON.stringify(cart));
+//   alert(itemName + " added to cart!");
+// }
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+

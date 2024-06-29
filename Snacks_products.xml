@@ -1,0 +1,117 @@
+<data>
+  <products>
+    <!-- Potato Chips -->
+    <product>
+      <name>Lays</name>
+      <image>Snacks/Potatochips.jpeg</image>
+      <category>Potato Chips</category>
+      <price>2.99</price>
+    </product>
+    <product>
+      <name>Cheddar_And_Sour_Cream</name>
+      <image>Snacks/Potatochips2.jpg</image>
+      <category>Potato Chips</category>
+      <price>2.99</price>
+      
+    </product>
+    <product>
+      <name>Ruffles_Potato_Chips</name>
+      <image>Snacks/ruffles.jpg</image>
+      <category>Potato Chips</category>
+      <price>2.99</price>
+      
+    </product>
+
+    <!-- Chocolate Bars -->
+    <product>
+      <name>Chocolate_blueberry</name>
+      <image>Snacks/chocolatebars.jpg</image>
+      <category>Chocolate bars</category>
+      <price>5.99</price>
+      
+    </product>
+    <product>
+      <name>Red_Dark_Chocolate_bar</name>
+      <image>Snacks/red.jpg</image>
+      <category>Chocolate bars</category>
+      <price>4.99</price>
+      
+    </product>
+    <product>
+      <name>Milka_Cherry</name>
+      <image>Snacks/milka.jpg</image>
+      <category>Chocolate bars</category>
+      <price>3.99</price>
+      
+    </product>
+
+    <!-- Popcorn -->
+    <product>
+      <name>Extra_Butter_Popcorn_(24-Pack)</name>
+      <image>Snacks/popcorn.jpg</image>
+      <category>Popcorn</category>
+      <price>5.99</price>
+      
+    </product>
+    <product>
+      <name>Movie</name>
+      <image>Snacks/popcorn2.jpg</image>
+      <category>Popcorn</category>
+      <price>6.99</price>
+      
+    </product>
+    <product>
+      <name>DDM_NATURAL_POPCORN</name>
+      <image>Snacks/popcorn3.jpg</image>
+      <category>Popcorn</category>
+      <price>5.99</price>
+      
+    </product>
+
+    <!-- Granola Bars -->
+    <product>
+      <name>Wellsley_Farms_Chewy_Chocolates</name>
+      <image>Snacks/granola3.jpg</image>
+      <category>Granola-bar</category>
+      <price>5.99</price>
+      
+    </product>
+    <product>
+      <name>Sweet_and_Salty_Almond_Granola_Bar</name>
+      <image>Snacks/granola2.jpg</image>
+      <category>Granola-bar</category>
+      <price>5.99</price>
+      
+    </product>
+
+    <!-- Mixed Nuts -->
+    <product>
+      <name>Kirkland Signature Extra Fancy Mixed Nuts</name>
+      <image>Snacks/nuts1.jpg</image>
+      <category>nuts</category>
+      <price>7.99</price>
+    </product>
+    <product>
+      <name>Planters_Mixed_Nuts</name>
+      <image>Snacks/nuts2.jpg</image>
+      <category>nuts</category>
+      <price>8.99</price>
+      
+    </product>
+
+    <!-- Cheese Puffs -->
+    <product>
+      <name>CHEETOS</name>
+      <image>Snacks/puffs1.jpg</image>
+      <category>cheese_puff</category>
+      <price>2.99</price>
+      
+    </product>
+    <product>
+      <name>Organic_Baked_Puffs_MacandCheese</name>
+      <image>Snacks/puffs2.jpg</image>
+      <category>cheese_puff</category>
+      <price>3.99</price>
+    </product>
+  </products>
+</data>

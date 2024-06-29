@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<data>
+  <products>
+    <product name="EggandCheese" quantity="8"/>
+    <product name="croissantcrust" quantity="9"/>
+    <product name="Oncor_patties" quantity="5"/>
+    <product name="homestyle_bakes" quantity="4"/>
+    <product name="corndogs" quantity="8"/>
+    <product name="pizzasnack" quantity="5"/>
+    <product name="taquitos" quantity="9"/>
+    <product name="Frozen_Meat-Beef" quantity="10"/>
+    <product name="Beef_Sandwich_Steaks_Sliced" quantity="8"/>
+    <product name="Special_Frozen_Pizza" quantity="9"/>
+    <product name="Cheese_Frozen_Pizza" quantity="11"/>
+    <product name="Oven_Crust_Pepperoni_Pizza" quantity="6"/>
+    <product name="Buffalo_Chicken" quantity="4"/>
+    <product name="Family_Size_Chicken_Alfredo_Frozen_Meal" quantity="10"/>
+    <product name="Honey_Roasted_Turkey_Breast" quantity="12"/>
+    <product name="vanila" quantity="8"/>
+    <product name="Strawberry_with_Chocolate_Flakes" quantity="5"/>
+    <product name="Dairy_Free_Butter_Pecan_Coconutmilk_Frozen_Dessert" quantity="7"/>
+    <product name="Frozen_Appetizers" quantity="7"/>
+    <product name="Bagel_Bites_Cheese" quantity="5"/>
+    <product name="Mini_Corn_Dogs" quantity="7"/>
+    <product name="Homestyle_Rollback" quantity="7"/>
+    <product name="Barbeque_Sauce_Patties" quantity="7"/>
+  </products>
+</data>

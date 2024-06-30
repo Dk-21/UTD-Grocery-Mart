@@ -40,21 +40,21 @@ UTD Grocery Mart is an online grocery store application that allows users to bro
 ## File Structure
 
 UTD-Grocery-Mart/
-├── About_us.html
-├── addToCart.php
-├── Baking.html
-├── Baking.php
-├── baking_Inventory.json
-├── baking_Inventorydb.php
-├── baking_products.json
-├── BreakfastandCereal.html
-├── breakfast_Inventory.json
-├── breakfast_Inventorydb.php
-├── breakfast_products.json
-├── breakfast.php
-├── buy.php
-├── Candy.html
-├── Candy.php
+- ├── About_us.html
+- ├── addToCart.php
+- ├── Baking.html
+- ├── Baking.php
+- ├── baking_Inventory.json
+- ├── baking_Inventorydb.php
+- ├── baking_products.json
+- ├── BreakfastandCereal.html
+- ├── breakfast_Inventory.json
+- ├── breakfast_Inventorydb.php
+- ├── breakfast_products.json
+- ├── breakfast.php
+- ├── buy.php
+- ├── Candy.html
+- ├── Candy.php
 ├── Candy_inventory.xml
 ├── candies_inventorydb.php
 ├── Candy_products.xml

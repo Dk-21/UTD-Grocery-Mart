@@ -147,10 +147,12 @@ Navigate to My_account.html to view and update your account details and order hi
 
 
 ## Screenshots
-![Home Page](Screenshot 2024-06-29 at 7.09.46 PM.png)
-![Breakfast Page](Screenshot 2024-06-29 at 7.10.02 PM.png)
-![My Account Page](Screenshot 2024-06-29 at 7.10.18 PM.png)
-![Cart](Screenshot 2024-06-29 at 7.10.56 PM.png)
+
+![Home Page](Home.png)
+![Breakfast Page](breakfast.png)
+![My Account Page](myaccount.png)
+![Cart](cart.png)
+
 
 ## Credits
 - Author: Denish Kalariya

@@ -102,13 +102,11 @@ UTD-Grocery-Mart/
 ## Setup Instructions
 
 1. **Clone the repository:**
-   ```
-   bash
-   git clone https://github.com/yourusername/UTD-Grocery-Mart.git ```
+   ``` bash git clone https://github.com/yourusername/UTD-Grocery-Mart.git ```
 
 2. **Navigate to the project directory:**
 
-   ```cd UTD-Grocery-Mart```
+   ``` cd UTD-Grocery-Mart ```
 3. **Set up the database**
 
 - Create a MySQL database named UTDMart.

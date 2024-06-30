@@ -55,48 +55,48 @@ UTD-Grocery-Mart/
 - ├── buy.php
 - ├── Candy.html
 - ├── Candy.php
-├── Candy_inventory.xml
-├── candies_inventorydb.php
-├── Candy_products.xml
-├── cart.html
-├── Cart.php
-├── Cartdb.php
-├── Checkout.php
-├── Contact_us.html
-├── Deals.html
-├── Fresh_Products.html
-├── fresh.php
-├── fresh_inventory.xml
-├── fresh_inventorydb.php
-├── fresh_products.xml
-├── img1.jpg
-├── img2.jpg
-├── index.php
-├── login.html
-├── login.php
-├── mystyle.css
-├── My_account.html
-├── Pantry.html
-├── pantry.php
-├── Pantry_Inventory.json
-├── pantry_inventorydb.php
-├── Pantry_products.json
-├── products.xml
-├── register.html
-├── register.php
-├── remove_cart.php
-├── Snacks.html
-├── Snacks.php
-├── snacks_inventorydb.php
-├── Snacks_Inventory.xml
-├── Snacks_products.xml
-├── Specialty_shop.html
-├── temp.html
-├── temp2cart.html
-├── temp3.html
-├── update_cart.php
-├── update_inventory.php
-├── Update.php
+- ├── Candy_inventory.xml
+- ├── candies_inventorydb.php
+- ├── Candy_products.xml
+- ├── cart.html
+- ├── Cart.php
+- ├── Cartdb.php
+- ├── Checkout.php
+- ├── Contact_us.html
+- ├── Deals.html
+- ├── Fresh_Products.html
+- ├── fresh.php
+- ├── fresh_inventory.xml
+- ├── fresh_inventorydb.php
+- ├── fresh_products.xml
+- ├── img1.jpg
+- ├── img2.jpg
+- ├── index.php
+- ├── login.html
+- ├── login.php
+- ├── mystyle.css
+- ├── My_account.html
+- ├── Pantry.html
+- ├── pantry.php
+- ├── Pantry_Inventory.json
+- ├── pantry_inventorydb.php
+- ├── Pantry_products.json
+- ├── products.xml
+- ├── register.html
+- ├── register.php
+- ├── remove_cart.php
+- ├── Snacks.html
+- ├── Snacks.php
+- ├── snacks_inventorydb.php
+- ├── Snacks_Inventory.xml
+- ├── Snacks_products.xml
+- ├── Specialty_shop.html
+- ├── temp.html
+- ├── temp2cart.html
+- ├── temp3.html
+- ├── update_cart.php
+- ├── update_inventory.php
+- ├── Update.php
 
 
 ## Setup Instructions
